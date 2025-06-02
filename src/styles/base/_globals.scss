@@ -1,0 +1,65 @@
+@use '../abstracts' as *;
+@use './utils' as *;
+
+body {
+    @include fluid-text(16, 14);
+
+    color: var(--color-black);
+    font-family: var(--font-family-base);
+}
+
+p {
+    line-height: 135%;
+    font-weight: 400;
+}
+
+h1,
+.h1 h2,
+.h2 h3,
+.h3 h4,
+.h4 {
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+h1,
+.h1 {
+    @include fluid-text(72, 32);
+
+    color: var(--color-gray);
+    font-weight: 600;
+    line-height: 115%;
+}
+
+h2,
+.h2 {
+    @include fluid-text(40, 24);
+}
+
+h3,
+.h3 {
+    @include fluid-text(36, 20);
+}
+
+h4,
+.h4 {
+    @include fluid-text(24, 18);
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition: var(--transition-duration);
+}
+
+a {
+    color: var(--color-black);
+}
+
+a:hover {
+    color: var(--color-green);
+}

@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.phone-button {
+    display: flex;
+    padding-block: rem(8);
+    padding-inline: rem(12);
+    border-radius: rem(40);
+    background-color: var(--color-green-60);
+}

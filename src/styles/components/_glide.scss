@@ -1,0 +1,109 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.glide {
+    overflow: hidden;
+    background-color: var(--color-black-10);
+    border-radius: rem(8);
+    width: rem(730) !important;
+    height: fluid(500, 275);
+
+    @include tablet {
+        width: 100% !important;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 1;
+    }
+
+    &__slides {
+        height: 100%;
+    }
+
+    &__track {
+        height: 100%;
+    }
+
+    &__bullets {
+        left: 85% !important;
+
+        @include mobile {
+            left: 77% !important;
+            top: 10%;
+        }
+    }
+
+    &__bullet {
+        width: fluid(48, 24) !important;
+        height: rem(4) !important;
+        border-radius: rem(10) !important;
+    }
+
+}
+
+.glide-2 {
+
+    &__slide {
+        display: flex;
+        position: relative;
+        align-items: flex-end;
+    }
+
+    &__slide::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 3;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.12) 32.69%, rgba(0, 0, 0, 0.12) 40.48%, rgba(0, 0, 0, 0.38) 53.81%, #000 100%);
+    }
+
+    &__img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+    }
+
+    &__text-content {
+        z-index: 4;
+        display: flex;
+        width: fluid(570, 260);
+        padding-inline: fluid(45, 20);
+        padding-block: fluid(45, 20);
+
+        flex-direction: column;
+        gap: fluid(16, 8);
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        @include fluid-text(36, 18);
+
+        width: 100%;
+        color: var(--color-light);
+        font-weight: 500;
+    }
+
+    &__description {
+        @include fluid-text(16, 12);
+
+        width: 100%;
+        font-weight: 500;
+        color: var(--color-light);
+        font-weight: 400;
+
+        display: none;
+    }
+
+}

@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+:root {
+    --color-light: #FFFFFF;
+    --color-light-60: #ffffff60;
+
+    --color-gray: #F4F4F4;
+    --color-gray-80: #F4F4F480;
+    --color-gray-link: #CBCBCB;
+    --color-gray-link-2: #BDBDBD;
+
+    --color-red: #D71F20;
+
+    --color-black: #1A1919;
+    --color-black-60: #767575;
+    --color-black-40: #1A191940;
+    --color-black-14: #1A191915;
+    --color-black-10: #1A191910;
+
+    --color-beige: #B4825B;
+
+    --color-green: #1E4D2B;
+    --color-green-60: #909F9F;
+    --color-green-30: #BCC8BF;
+
+    --font-family-base: 'Involve', sans-serif;
+
+    --container-width: #{rem(1280)};
+    --container-padding-x: #{rem(20)};
+
+    --transition-duration: 0.2s;
+
+    @include laptop {
+        --container-width: #{rem(1160)};
+    }
+
+}

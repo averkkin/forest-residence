@@ -1,0 +1,61 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.infrastructure {
+
+    background-color: var(--color-gray);
+    padding-block: fluid(100, 60);
+
+    &--inner {
+        display: flex;
+        justify-content: space-between;
+        gap: fluid(40, 30);
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        display: flex;
+        margin: auto 0;
+        flex-direction: column;
+        width: rem(512);
+        gap: fluid(40, 24);
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(24, 16);
+    }
+
+    &__footer {
+        display: flex;
+        // justify-content: space-between;
+        gap: fluid(20, 50);
+
+        @include mobile {
+            justify-content: space-around
+        }
+    }
+
+    &__info-title {
+        @include fluid-text(28, 20);
+    }
+
+    &__info-subtitle {
+        font-size: rem(12);
+    }
+
+    &__info-item {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(8, 4);
+    }
+
+}

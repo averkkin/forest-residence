@@ -1,0 +1,54 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(50, 25);
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(16, 8);
+    }
+
+    &__input-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        @include fluid-text(32, 20);
+        padding-block: fluid(26, 13);
+        color: var(--color-black);
+        font-weight: 500;
+        border-bottom: rem(1) solid var(--color-gray-link-2);
+    }
+
+    &__input::placeholder {
+        color: var(--color-gray-link)
+    }
+
+    &__input:focus {
+        border-bottom: var(--color-black)
+    }
+
+    &__error {
+        @include fluid-text(12, 11);
+        color: red;
+        display: none;
+    }
+
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(24, 8);
+    }
+
+    &__privacy {
+        font-size: rem(12);
+        font-weight: 400;
+        color: var(--color-black-60);
+    }
+
+}

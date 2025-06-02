@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.min.css">
+
+    <!-- Glide.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+
+    <title>Лесная резиденция</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header--inner container">
+            <div class="header__overlay">
+                <nav class="header__site-navigation hidden-mobile">
+                    <ul>
+                        <li
+                            class="header__site-navigation-item header__site-navigation-item--burger header__site-navigation-item-link">
+                            <button type="button" aria-label="Open menu" title="Open menu"><img
+                                    src="../images/burger-icon.svg" alt="">Меню</button>
+                        </li>
+                        <li class="header__site-navigation-item"><a href=""
+                                class="header__site-navigation-item-link">Квартиры</a>
+                        </li>
+                        <li class="header__site-navigation-item"><a href=""
+                                class="header__site-navigation-item-link">Новости</a></li>
+                    </ul>
+                </nav>
+                <button class="header__logo" type="button" title="Home" aria-label="Home"><img class="header__logo"
+                        src="../images/logo.svg" alt="" width="141" height="38"></button>
+                <div class="header__contact hidden-laptop">
+                    <div class="header__phone">+7 495 023-01-63</div>
+                    <button class="header__callback">Обратный звонок</button>
+                    <div class="header__social-media-icons">
+                        <img src="../images/whatsapp.svg" alt="whatsapp" class="whatsapp-icon" width="20" height="20">
+                        <img src="../images/tg.svg" alt="telegram" class="telegram-icon" width="20" height="20">
+                    </div>
+                </div>
+            </div>
+            <button class="header__burger-button burger-button visible-mobile" type="button" aria-label="Open menu"
+                title="Open menu"><img src="../images/burger-icon-mobile.svg" alt="" width="16" height="4">Меню</button>
+
+            <button class="phone-button visible-mobile" type="button" aria-label="Call" title="Call"><img
+                    src="../images/Phone.svg" alt="" width="16" height="16"></button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <img src="../images/bg.jpg" alt="Background" class="hero__background">
+            <div class="hero__content container-mobile">
+                <div class="hero__heading">
+                    <h1 class="hero__title h1">Новый жилой комплекс</h1>
+                    <p class="hero__subtitle p">В Лесной Резиденции семейные традиции станут основным сценарием жизни.
+                    </p>
+                </div>
+                <button class="button button--light button--large-text" type="button" area-label="Callback">Оставить
+                    заявку</button>
+            </div>
+        </section>
+
+        <section class="infrastructure">
+            <div class="infrastructure--inner container">
+                <article class="infrastructure__content">
+                    <header class="infrastructure__header">
+                        <h2 class="infrastructure__title h2">Все необходимое <br />рядом</h2>
+                        <p class="infrastructure__subtitle">В Жилом комплексе рядом с лесом вы сможете наслаждаться
+                            всеми
+                            возможностями города и&nbsp;отдыхать у себя дома в полной
+                            тишине. Можно забыть о пробках ведь все необходимое рядом: новая школа детский сад остановка
+                            магазины и&nbsp;товары первой
+                            необходимости.</p>
+                    </header>
+                    <hr class="hr">
+                    <footer class="infrastructure__footer">
+                        <div class="infrastructure__info-item">
+                            <div class="infrastructure__info-title">10 минут</div>
+                            <p class="infrastructure__info-subtitle">На авто и вы <br class="br-mobile" />в центре
+                                города
+                            </p>
+                        </div>
+                        <div class="infrastructure__info-item">
+                            <div class="infrastructure__info-title">23</div>
+                            <p class="infrastructure__info-subtitle">Уникальные <br class="br-mobile" />планировки</p>
+                        </div>
+                    </footer>
+                </article>
+                <div class="glide glide-1">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide"><img src="../images/slider/photo1.jpg" alt="interior"
+                                    class="glide__img"></li>
+                            <li class="glide__slide"><img src="../images/slider/photo2.jpg" alt="street"
+                                    class="glide__img"></li>
+                            <li class="glide__slide"><img src="../images/slider/photo3.jpg" alt="house"
+                                    class="glide__img"></li>
+                        </ul>
+                        <div class="glide__bullets" data-glide-el="controls[nav]">
+                            <button class="glide__bullet" data-glide-dir="=0"></button>
+                            <button class="glide__bullet" data-glide-dir="=1"></button>
+                            <button class="glide__bullet" data-glide-dir="=2"></button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+
+                    new Glide('.glide-1', {
+                        type: 'carousel',
+                        startAt: 0,
+                        perView: 1,
+                        autoplay: 3000,
+                        hoverpause: false,
+                    }).mount();
+
+                </script>
+            </div>
+        </section>
+
+        <section class="select-apart container">
+            <h2 class="h2 select-apart__title">Выберите квартиру</h2>
+            <div class="filter-app"></div>
+            <div class="more-variants"></div>
+        </section>
+
+        <section class="callback-form">
+            <div class="callback-form--inner container">
+                <div class="callback-form__content">
+                    <h2 class="h2 callback-form__h2">Ответим на любые ваши вопросы</h2>
+                    <form action="" class="contact-form">
+                        <div class="contact-form__inputs">
+                            <div class="contact-form__input-group">
+                                <input type="text" id="name" name="name" class="contact-form__input" required
+                                    placeholder="Имя">
+                                <span class="contact-form__error">Пожалуйста, укажите имя</span>
+                            </div>
+                            <div class="contact-form__input-group">
+                                <input type="tel" id="phone" name="phone" class="contact-form__input" required
+                                    pattern="\+?[0-9\s\-\(\)]{7,}" placeholder="+7 (___) ___-__-__">
+                                <span class="contact-form__error">Неверный формат номера</span>
+                            </div>
+                        </div>
+                        <div class="contact-form__cta">
+                            <button class="button contact-form__button">Оставить заявку</button>
+                            <p class="contact-form__privacy">Нажимая на кнопку, вы даете согласие на обработку своих
+                                персональных данных и соглашаетесь с <a href=""><span
+                                        style="text-decoration: underline 1px solid;">Политикой
+                                        конфиденциальности</span></a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="glide glide-2">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide glide-2__slide"><img src="../images/slider/photo1.jpg"
+                                    alt="interior" class="glide__img glide-2__img">
+
+                                <div class="glide-2__text-content">
+                                    <h3 class="glide-2__title h3">Старт продаж уже в июне</h3>
+                                    <p class="glide-2__description">Когда-то от Тверской заставы начиналась Москва.
+                                        Теперь в этом районе, от нового комплекса, начинается деловой и исторический
+                                        центр
+                                        нашего города. Совершайте прогулки до интереснейших мест Москвы. </p>
+                                </div>
+                            </li>
+                            <li class="glide__slide glide-2__slide"><img src="../images/slider/photo2.jpg" alt="street"
+                                    class="glide__img glide-2__img">
+                                <div class="glide-2__text-content">
+                                    <h3 class="glide-2__title h3">Старт продаж уже в июне</h3>
+                                    <p class="glide-2__description">Когда-то от Тверской заставы начиналась Москва.
+                                        Теперь в этом районе, от нового комплекса, начинается деловой и исторический
+                                        центр
+                                        нашего города. Совершайте прогулки до интереснейших мест Москвы. </p>
+                                </div>
+                            </li>
+                            <li class="glide__slide glide-2__slide"><img src="../images/slider/photo3.jpg" alt="house"
+                                    class="glide__img glide-2__img">
+                                <div class="glide-2__text-content">
+                                    <h3 class="glide-2__title h3">Старт продаж уже в июне</h3>
+                                    <p class="glide-2__description">Когда-то от Тверской заставы начиналась Москва.
+                                        Теперь в этом районе, от нового комплекса, начинается деловой и исторический
+                                        центр
+                                        нашего города. Совершайте прогулки до интереснейших мест Москвы. </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="glide__bullets" data-glide-el="controls[nav]">
+                            <button class="glide__bullet" data-glide-dir="=0"></button>
+                            <button class="glide__bullet" data-glide-dir="=1"></button>
+                            <button class="glide__bullet" data-glide-dir="=2"></button>
+                        </div>
+                    </div>
+                    <script>
+
+                        new Glide('.glide-2', {
+                            type: 'carousel',
+                            startAt: 0,
+                            perView: 1,
+                            autoplay: 4000,
+                            hoverpause: true,
+                        }).mount();
+
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <section class="infograph">
+            <div class="infograph__header">
+                <div class="infograph__logo--inner container">
+                    <img src="../images/light-logo.svg" alt="Logo" class="infograph__logo" width="592" height="155">
+                </div>
+            </div>
+            <div class="infograph__footer container">
+                <div class="infograph__item">
+                    <div class="infograph__number">01</div>
+                    <div class="infograph__info-down">
+                        <hr class="hr infograph__hr">
+                        <div class="infograph__info-title">48+</div>
+                        <div class="infograph__info-subtitle">Offices offices</div>
+                    </div>
+                </div>
+                <div class="infograph__item">
+                    <div class="infograph__number">02</div>
+                    <div class="infograph__info-down">
+                        <hr class="hr infograph__hr">
+                        <div class="infograph__info-title">$30</div>
+                        <div class="infograph__info-subtitle">Offices offices</div>
+                    </div>
+                </div>
+                <div class="infograph__item">
+                    <div class="infograph__number">03</div>
+                    <div class="infograph__info-down">
+                        <hr class="hr infograph__hr">
+                        <div class="infograph__info-title">$1.754</div>
+                        <div class="infograph__info-subtitle">Offices offices</div>
+                    </div>
+                </div>
+                <div class="infograph__item">
+                    <div class="infograph__number">04</div>
+                    <div class="infograph__info-down">
+                        <hr class="hr infograph__hr">
+                        <div class="infograph__info-title">6</div>
+                        <div class="infograph__info-subtitle">Offices offices</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="envir envir__background">
+            <h2 class="h2 envir__title">Особое удовольствие наслаждаться природой и&nbsp;умиротворением
+                когда&nbsp;окружающая
+                инфраструктура<br class="br-mobile">в&nbsp;полном порядке</h2>
+            <img src="../images/envir/1.jpg" alt="image" class="envir__img envir__img1">
+            <img src="../images/envir/2.jpg" alt="image" class="envir__img envir__img2">
+            <img src="../images/envir/3.jpg" alt="image" class="envir__img envir__img3">
+            <img src="../images/envir/4.jpg" alt="image" class="envir__img envir__img4">
+            <img src="../images/envir/5.jpg" alt="image" class="envir__img envir__img5">
+        </section>
+
+        <section class="commercial-promo">
+            <div class="commercial-promo--inner container">
+                <div class="commercial-promo__content">
+                    <div class="commercial-promo__heading">
+                        <h2 class="h2 commercial-promo__title">Коммерческая <br>недвижимость</h2>
+                        <p class="commercial-promo__subtitle">Мы сопровождаем вашу сделку на каждом этапе.
+                            Работаем со всеми банками.</p>
+                    </div>
+                    <div class="commercial-promo__items">
+                        <div class="commercial-promo__item">
+                            <img src="../images/sqare.svg" alt="Frame" class="commercial-promo__icon">
+                            <p class="commercial-promo__descript">Коммерция на первых этажах</p>
+                        </div>
+                        <div class="commercial-promo__item">
+                            <img src="../images/cargo.svg" alt="Cargo" class="commercial-promo__icon">
+                            <p class="commercial-promo__descript">Удобные подъезды</p>
+                        </div>
+                        <div class="commercial-promo__item">
+                            <img src="../images/infrastructure.svg" alt="infrasctructure"
+                                class="commercial-promo__icon">
+                            <p class="commercial-promo__descript">Развитая инфраструктура</p>
+                        </div>
+                    </div>
+                    <button class="button commercial-promo__button button--light-gray">Смотреть недвижимость</button>
+                </div>
+                <div class="commercial-promo__images">
+                    <img src="../images/commercial-promo/img2.jpg" alt="street"
+                        class="commercial-promo__img commercial-promo__small-img" width="164" height="194">
+                    <img src="../images/commercial-promo/img1.jpg" alt="house"
+                        class="commercial-promo__img commercial-promo__large-img" width="530" height="617">
+                    <img src="../images/commercial-promo/img3.png" alt="flower"
+                        class="commercial-promo__img commercial-promo__flower" width="270" height="356">
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer--inner container">
+                <div class="footer__header">
+                    <div class="foter__logo--inner">
+                        <img src="../images/logo.svg" alt="Logo" class="footer__logo" width="178" height="48">
+                    </div>
+                    <div class="footer__contact">
+                        <div class="footer__contact-header">
+                            <div class="footer__messengers">
+                                <img src="../images/whatsapp.svg" alt="Whatsapp Icon" class="footer__tg" width="24"
+                                    height="24">
+                                <img src="../images/tg.svg" alt="Telegram Icon" class="footer__wa" width="24"
+                                    height="24">
+                            </div>
+                            <div class="footer__phone"><a href="" class="footer__phone-link">8 800 707-52-14</a></div>
+                        </div>
+                        <div class="footer__contact-footer">
+                            <p class="footer__operating">Работаем Пн — Пт с 9:00 до 19:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__down-section">
+                    <div class="footer__property">
+                        <p class="footer__property-text">Описание компании краткое на две строки</p>
+                        <p class="footer__property-text">ООО «»<br>ИНН:<br>КПП:<br>ОГРН:</p>
+                        <p class="footer__property-text"><a href="" class="footer__prop-link">Скачать выписку из
+                                ЕГРЮЛ</a></p>
+                        <p class="footer__property-text"><a href="" class="footer__prop-link">Политика
+                                конфиденциальности</a></p>
+                    </div>
+                    <nav class="footer__menu">
+                        <ul class="footer__items">
+                            <li class="footer__item"><a href="" class="footer__item-link">Квартиры</a></li>
+                            <li class="footer__item"><a href="" class="footer__item-link">Коммерческая недвижимость</a>
+                            </li>
+                            <li class="footer__item"><a href="" class="footer__item-link">Новости и акции</a></li>
+                            <li class="footer__item"><a href="" class="footer__item-link">Документы</a></li>
+                            <li class="footer__item"><a href="" class="footer__item-link">Ход строительства</a></li>
+                            <li class="footer__item"><a href="" class="footer__item-link">О компании</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer__menu">
+                        <ul class="footer__items">
+                            <li class="footer__item"><a href="" class="footer__item-link">О проекте</a></li>
+                            <li class="footer__item"><a href="" class="footer__item-link">Способы покупки</a></li>
+                            <li class="footer__item"><a href="" class="footer__item-link">Рассчитать ипотеку</a></li>
+                            <li class="footer__item"><a href="" class="footer__item-link">Пункт</a></li>
+                            <li class="footer__item"><a href="" class="footer__item-link">Пункт</a></li>
+                            <li class="footer__item"><a href="" class="footer__item-link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer__more-info">
+                        <div class="footer__media">
+                            <div class="footer__social">
+                                <p class="footer__subtitle">Подписывайтесь на нас</p>
+                                <div class="footer__social-icons">
+                                    <img src="../images/vkontakte.svg" alt="VK Icon" class="footer__vk-icon" width="24"
+                                        height="24">
+                                    <img src="../images/youtube.svg" alt="Youtube Icon" class="footer__youtube-icon"
+                                        width="24" height="24">
+                                </div>
+                            </div>
+                            <div class="footer__email">
+                                <p class="footer__subtitle">Наш e-mail</p>
+                                <a href="" class="footer__email-link">support@lr.ru</a>
+                            </div>
+                        </div>
+                        <div class="footer__develop">
+                            <p class="footer__develop-text footer__subtitle">Разработка сайта</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

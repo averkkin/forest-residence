@@ -1,0 +1,104 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.envir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fluid(864, 614);
+    background-color: var(--color-green);
+    position: relative;
+
+    @media (width <=rem(1644)) {
+        overflow: hidden;
+    }
+
+    @media (width >=rem(1779)) {
+        overflow: hidden;
+    }
+
+    &__background {
+        background: url(../../images/envir/bg-envir.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__title {
+        @include fluid-text(40, 20);
+
+        color: var(--color-gray);
+        text-align: center;
+        width: fluid(990, 300);
+    }
+
+    &__img {
+        position: absolute;
+        border-radius: rem(300);
+    }
+
+    &__img1 {
+        width: fluid(422, 212);
+        height: fluid(422, 212);
+        top: fluid(-56, 16);
+        left: fluid(-130, -89);
+        translate: 0 -15%;
+
+        @include mobile {
+            translate: 0 0;
+        }
+    }
+
+    &__img2 {
+        width: fluid(180, 87);
+        height: fluid(180, 87);
+        top: fluid(58, 135);
+        left: fluid(1200, 253);
+        translate: 0 -15%;
+
+        @include mobile {
+            translate: 0 0;
+        }
+    }
+
+    &__img3 {
+        width: fluid(180, 92);
+        height: fluid(180, 92);
+        top: fluid(610, 405);
+        left: fluid(190, 17);
+        translate: 0 -15%;
+
+        @include mobile {
+            translate: 0 0;
+        }
+    }
+
+    &__img4 {
+        width: fluid(180, 54);
+        height: fluid(180, 54);
+        top: fluid(516, 374);
+        left: fluid(840, 239);
+        translate: 0 -13%;
+
+        @include mobile {
+            translate: 0 0;
+        }
+    }
+
+    &__img5 {
+        width: fluid(420, 193);
+        height: fluid(420, 193);
+        top: fluid(419, 447);
+        left: fluid(1220, 199);
+        translate: 0 -7%;
+
+        @media (width >=rem(1780)) {
+            translate: 70% 0;
+        }
+
+        @include mobile {
+            translate: 0 0;
+        }
+    }
+}

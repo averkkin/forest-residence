@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.button {
+    // @include fluid-text(16, 14);
+
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(50);
+    background-color: var(--color-green);
+    color: var(--color-gray);
+    border-radius: rem(60);
+    padding-inline: rem(56);
+    padding-block: rem(13);
+    font-weight: 600;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    &--light {
+        background-color: var(--color-gray);
+        color: var(--color-beige);
+    }
+
+    &--light-gray {
+        background-color: var(--color-light);
+        color: var(--color-green);
+    }
+
+    &--large-text {
+        @include fluid-text(18, 18);
+    }
+}

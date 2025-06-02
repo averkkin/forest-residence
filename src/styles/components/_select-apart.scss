@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.select-apart {
+    padding-block: fluid(100, 60);
+    height: fluid(884, 700);
+}

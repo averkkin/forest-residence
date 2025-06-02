@@ -1,0 +1,150 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.commercial-promo {
+    width: 100%;
+    background-color: var(--color-gray);
+    padding-block: fluid(100, 60);
+    overlay: hidden;
+
+    &--inner {
+        display: flex;
+        background-color: var(--color-green-30);
+        color: var(--color-light);
+        border-radius: rem(24);
+        padding: rem(20);
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            padding-block: rem(30);
+            padding-inline: rem(20) !important;
+            max-width: 100%;
+            margin-inline: 0;
+            padding-inline: 0;
+            gap: rem(32);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(45, 25);
+        width: fluid(360, 300);
+        margin-left: fluid(50, 0.1);
+
+        @include mobile-above {
+            padding-top: rem(80);
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(24, 16);
+    }
+
+    &__title {
+        @include fluid-text(40, 24);
+        font-weight: 500;
+        line-height: 115%;
+    }
+
+    &__subtitle {
+        font-size: rem(14);
+        font-weight: 400;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: rem(17);
+        padding-block: rem(16);
+        border-bottom: rem(1) solid var(--color-light-60);
+    }
+
+    &__item:nth-child(3) {
+        border-bottom: none;
+    }
+
+    &__icon {
+        width: rem(24);
+        height: rem(24);
+    }
+
+    &__descript {
+        text-transform: uppercase;
+        font-size: rem(14);
+    }
+
+    &__images {
+        display: flex;
+        gap: fluid(16, 8);
+        flex-direction: row;
+        position: relative;
+        align-items: end;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        border-radius: rem(16);
+    }
+
+    &__small-img {
+        width: rem(164);
+        height: fluid(194, 200);
+        object-fit: cover;
+        object-position: bottom;
+
+        @include tablet {
+            width: 100%;
+            // height: rem(300);
+        }
+
+        @include mobile {
+            width: 100%;
+            // height: rem(100);
+        }
+    }
+
+    &__large-img {
+        width: fluid(530, 300);
+        height: fluid(617, 200);
+        object-fit: cover;
+        object-position: center;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__flower {
+        position: absolute;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+}

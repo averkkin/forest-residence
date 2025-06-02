@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.hero {
+    width: 100%;
+    height: 720px;
+    background-color: var(--color-black);
+    // background: url(../../images/bg.jpg) center no-repeat;
+    // background-size: cover;
+    position: relative;
+
+    @include laptop {
+        height: 90vh;
+    }
+
+    &__background {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+    }
+
+    &__content {
+        @include abs-center;
+
+        display: flex;
+        flex-direction: column;
+        gap: rem(56);
+        align-items: center;
+
+        @include mobile {
+            gap: rem(48);
+            align-items: start;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            left: 0;
+            translate: 0 -70%;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: rem(36);
+        align-items: center;
+        text-align: center;
+
+        @include mobile {
+            align-items: start;
+            text-align: left;
+            gap: rem(16);
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        @include fluid-text (16, 14);
+        color: var(--color-gray);
+        max-width: rem(488);
+    }
+}

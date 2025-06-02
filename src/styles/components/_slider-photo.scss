@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.slider-photo {
+    background-color: var(--color-black-10);
+    border-radius: rem(8);
+    width: rem(730);
+    height: fluid(500, 275);
+
+    @include tablet {
+        width: 100%;
+    }
+}

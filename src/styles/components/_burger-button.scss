@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+
+.burger-button {
+    display: flex;
+    align-items: center;
+    padding-block: rem(8);
+    padding-inline: rem(12);
+    border-radius: rem(40);
+    background-color: var(--color-green-60);
+    color: var(--color-light);
+    font-weight: 600;
+    gap: rem(8);
+
+    img {
+        position: relative;
+        top: rem(-1);
+    }
+}
